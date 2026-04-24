@@ -28,7 +28,7 @@ class BankAccount:
             other_account.deposit(amount)
 
     def info(self):
-        print(f"Balance: {self.balance}")
+        return f"Account holder: {self.account_holder}\nAccount number: {self.account_number}\nBalance: {self.balance}"
 
     @classmethod
     def get_accounts_created(cls):
@@ -53,5 +53,5 @@ account1.transfer_to(account2, 1000)
 print(
     f"Account 1 balance: {account1.balance}", f"Account 2 balance: {account2.balance}"
 )
-account2.info()
+print(account2.info())
 print(BankAccount.get_accounts_created())
