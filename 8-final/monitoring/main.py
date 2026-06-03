@@ -1,6 +1,11 @@
-def main() -> None:
-    print('Monitoring started')
+from app import MonitorApp
+from config.config import AppSettings
 
 
-if __name__ == '__main__':
-    main()
+def run():
+    settings = AppSettings.from_defaults()
+    MonitorApp(settings).run()
+
+
+if __name__ == "__main__":
+    run()
